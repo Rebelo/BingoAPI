@@ -6,7 +6,7 @@ const Banca = require('../models/Banca');
 exports.createBanca = asyncHandler(async (req, res, next) => {
     const banca = await Banca.create(req.body);
 
-    res.status(200).json({
+    res.status(201).json({
         success: true,
         banca
     });
@@ -16,7 +16,7 @@ exports.createBanca = asyncHandler(async (req, res, next) => {
 //Tela configuração --Gestão
 exports.updateBanca = asyncHandler(async (req, res, next) => {
     
-    console.log(req.params.id);
+
     const banca = await Banca.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
         runValidators: true,

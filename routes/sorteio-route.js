@@ -4,7 +4,7 @@ const express = require("express");
 const {
     getSorteios,
     createSorteio
-} = require('../controllers/Sorteio');
+} = require('../controllers/sorteio-contoller');
 
 const router = express.Router();
 const {protect} = require('../middleware/auth');

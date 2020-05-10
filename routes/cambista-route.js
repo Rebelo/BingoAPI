@@ -8,7 +8,7 @@ const {
     getAssociacoes,
     createAssociacao,
     deleteAssociacao
-} = require('../controllers/Cambista');
+} = require('../controllers/cambista-contoller');
 
 const Cambista = require('../models/Cambista');
 const advancedResults = require('../middleware/advancedResults');

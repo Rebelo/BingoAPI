@@ -7,7 +7,7 @@ const {
     getRodada,
     getPagamentosCambista,
     getApostas
-} = require('../controllers/Reports');
+} = require('../controllers/reports-contoller');
 
 const router = express.Router();
 const {protect} = require('../middleware/auth');

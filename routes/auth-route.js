@@ -5,7 +5,7 @@ const {
     getMe, 
     logout, 
     trocarSenha 
-} = require('../controllers/auth');
+} = require('../controllers/auth-contoller');
 
 const router = express.Router();
 const {protect} = require('../middleware/auth');

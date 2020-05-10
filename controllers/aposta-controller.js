@@ -4,7 +4,6 @@ const Aposta = require('../models/Aposta');
 const Rodada = require('../models/Rodada');
 const mongoose = require('mongoose');
 
-
 //Tela apostas - App
 exports.newAposta = asyncHandler(async (req, res, next) => {
 
@@ -21,7 +20,7 @@ exports.newAposta = asyncHandler(async (req, res, next) => {
         return next(new errorResponse(`Não foi possível criar essa nova aposta`, 404));
     }
 
-    res.status(200).json({
+    res.status(201).json({
         success: true,
         data: aposta
     });
@@ -38,7 +37,6 @@ exports.getAposta = asyncHandler(async (req, res, next) => {
 exports.pagamentoAposta = asyncHandler(async (req, res, next) => {
 
     const SESSION = await mongoose.startSession();
-
     await SESSION.startTransaction();
 
     try {

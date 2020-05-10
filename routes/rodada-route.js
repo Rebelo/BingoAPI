@@ -8,7 +8,7 @@ const {
     getRodadasAposta,
     updateRodadas,
     setCambistasPagos
-} = require('../controllers/Rodada');
+} = require('../controllers/rodada-contoller');
 
 const router = express.Router();
 const {protect} = require('../middleware/auth');

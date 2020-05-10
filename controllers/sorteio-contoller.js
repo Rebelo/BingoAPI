@@ -35,7 +35,11 @@ exports.createSorteio = asyncHandler(async (req, res, next) => {
 
         const sorteio = await Sorteio.create(data);
 
-        res.status(200).json({
+        if(!sorteio){
+            return next(new errorResponse(`Não foi possível adicioanr um sorteio`, 400));
+        }
+
+        res.status(201).json({
             success: true,
             data: sorteio
         });

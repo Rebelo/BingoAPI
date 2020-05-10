@@ -5,7 +5,7 @@ const {
     updateBanca,
     createBanca,
     getBanca
-} = require('../controllers/Banca');
+} = require('../controllers/banca-contoller');
 
 const router = express.Router();
 const {protect} = require('../middleware/auth');

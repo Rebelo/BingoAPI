@@ -4,6 +4,7 @@ const Rodada = require('../models/Rodada');
 const errorResponse = require('../utils/errorResponse');
 const mongoose = require('mongoose');
 
+//todo: adicionar conceitos avançados do mongoose
 module.exports.apuracao = async (sorteados, sorteio_id, banca_id, next) => {
 
     const SESSION = await mongoose.startSession();

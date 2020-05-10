@@ -6,7 +6,7 @@ const {
     updateMaquina, 
     deleteMaquina,
     createMaquina
-} = require('../controllers/Maquina');
+} = require('../controllers/maquina-contoller');
 
 const Maquina = require('../models/Maquina');
 const advancedResults = require('../middleware/advancedResults');

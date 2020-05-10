@@ -34,7 +34,7 @@ exports.deleteMaquina = asyncHandler(async (req, res, next) => {
 exports.createMaquina = asyncHandler(async (req, res, next) => {
     const maquina = await Maquina.create(req.body);
 
-    res.status(200).json({
+    res.status(201).json({
         success: true,
         data: maquina
     });

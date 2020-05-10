@@ -6,7 +6,7 @@ exports.register = asyncHandler(async (req, res, next) => {
     const cambista = await Cambista.create(req.body);
 
 
-    res.status(200).json({
+    res.status(201).json({
         success: true,
         data: cambista
     });

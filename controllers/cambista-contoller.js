@@ -54,7 +54,6 @@ exports.createAssociacao = asyncHandler(async (req, res, next) => {
     await SESSION.startTransaction();
 
     try {
-        //todo transactions everywhere
         const cambista = await Cambista.findByIdAndUpdate(req.query._id, {
             maquina_id: req.query.maquina_id,
             associado: true,

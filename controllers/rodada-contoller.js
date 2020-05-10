@@ -37,7 +37,11 @@ exports.createRodada = asyncHandler(async (req, res, next) => {
 
     const rodada = await Rodada.create(copy);
 
-    res.status(200).json({
+    if(!rodada){
+        return next(new errorResponse(`Não foi possível criar uma rodada`, 400));
+    }
+
+    res.status(201).json({
         success: true,
         data: rodada
     });

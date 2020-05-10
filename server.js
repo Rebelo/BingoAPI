@@ -14,15 +14,6 @@ dotenv.config({path: './config/config.env'});
 
 connectDB();
 
-const auth = require('./routes/auth');
-const aposta = require('./routes/aposta');
-const banca = require('./routes/banca');
-const cambista = require('./routes/cambista');
-const rodada = require('./routes/rodada');
-const report = require('./routes/report');
-const sorteio = require('./routes/sorteio');
-const maquina = require('./routes/maquina');
-
 const app = express();
 
 app.use(cors());
@@ -34,6 +25,17 @@ if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 
+
+//ROUTES///////////////////////////////////////
+const auth = require('./routes/auth-route');
+const aposta = require('./routes/aposta-route');
+const banca = require('./routes/banca-route');
+const cambista = require('./routes/cambista-route');
+const rodada = require('./routes/rodada-route');
+const report = require('./routes/report-route');
+const sorteio = require('./routes/sorteio-route');
+const maquina = require('./routes/maquina-route');
+
 app.use('/', express.static('static'));
 app.use('/aposta', aposta);
 app.use('/auth', auth);
@@ -44,6 +46,8 @@ app.use('/rodada', rodada);
 app.use('/report', report);
 app.use('/sorteio', sorteio);
 app.use(errorHandler);
+////////////////////////////////////////////////
+
 
 if(process.env.NODE_ENV === 'development'){
 
